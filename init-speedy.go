@@ -21,7 +21,8 @@ func initApplication() *application {
 	}
 
 	speed.AppName = "myapp"
-	speed.Debug = true
+
+	speed.InfoLog.Println("Debug is set to", speed.Debug)
 
 	app := &application{
 		App: speed,
