@@ -1,3 +1,3 @@
 # Speedy-App
 
-### App SpeedyApp di Test per il modulo go Speedy
+### App di Test per il modulo go Speedy
