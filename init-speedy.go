@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"myapp/handlers"
 	"os"
 
 	"github.com/ghibbo/speedy"
@@ -22,11 +23,16 @@ func initApplication() *application {
 
 	speed.AppName = "myapp"
 
-	speed.InfoLog.Println("Debug is set to", speed.Debug)
-
-	app := &application{
+	myHandlers := &handlers.Handlers{
 		App: speed,
 	}
+
+	app := &application{
+		App:      speed,
+		Handlers: myHandlers,
+	}
+
+	app.App.Routes = app.routes()
 
 	return app
 }

@@ -1,9 +1,14 @@
 package main
 
-import "github.com/ghibbo/speedy"
+import (
+	"myapp/handlers"
+
+	"github.com/ghibbo/speedy"
+)
 
 type application struct {
-	App *speedy.Speedy
+	App      *speedy.Speedy
+	Handlers *handlers.Handlers
 }
 
 func main() {
